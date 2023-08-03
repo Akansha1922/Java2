@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class WeatherApp {
+public class Weather{
 
     private static final String API_KEY = "YOUR_API_KEY";
     private static final String BASE_URL = "http://api.weather.example.com/"; 
 
-public static void main(String[] args) {
+public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             printMenu();
@@ -22,10 +22,10 @@ public static void main(String[] args) {
                     getPressure();
                     break;
                 case 0:
-                    System.out.println("Exiting program. Goodbye!");
+                    System.out.println("Program exit");
                     return;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid choice");
             }
         }
     }
