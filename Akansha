@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Weather{
+public class WeatherApp{
 
     private static final String API_KEY = "YOUR_API_KEY";
     private static final String BASE_URL = "http://api.weather.example.com/"; 
