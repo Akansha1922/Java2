@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class WeatherApp {
+
+    private static final String API_KEY = "YOUR_API_KEY";
+    private static final String BASE_URL = "http://api.weather.example.com/"; 
+
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            printMenu();
+            int ch = scanner.nextInt();
+            scanner.nextLine();
+        switch (ch) {
+                case 1:
+                    getWeather();
+                    break;
+                case 2:
+                    getWindSpeed();
+                    break;
+                case 3:
+                    getPressure();
+                    break;
+                case 0:
+                    System.out.println("Exiting program. Goodbye!");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+private static void printMenu() {
+        System.out.println("1. Get weather");
+        System.out.println("2. Get Wind Speed");
+        System.out.println("3. Get Pressure");
+        System.out.println("0. Exit");
+        System.out.print("Enter your choice: ");
+    }
+private static void getWeather() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the date (YYYY-MM-DD): ");
+        String date = scanner.nextLine();
+        String data = getWeatherData(date);
+        System.out.println("Temperature on " + date + ": " + data + "°C");
+    }
+private static void getWindSpeed() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the date (YYYY-MM-DD): ");
+        String date = scanner.nextLine();
+        String data = getWeatherData(date);
+        System.out.println("Wind Speed on " + date + ": " + data + " m/s");
+    }
+private static void getPressure() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the date (YYYY-MM-DD): ");
+        String date = scanner.nextLine();
+        String data = getWeatherData(date);
+        System.out.println("Pressure on " + date + ": " + data + " hPa");
+    }
+private static String getWeatherData(String date) {
+        return "25";
+    }
+}
